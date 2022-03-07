@@ -180,6 +180,6 @@ print_info("insutance", 99, gender="Male")
 
 ## 참고
 
-- [https://dailyheumsi.tistory.com/41](https://dailyheumsi.tistory.com/41)
-- [https://jangjy.tistory.com/358](https://jangjy.tistory.com/358)
-- [https://mingrammer.com/understanding-the-asterisk-of-python/](https://mingrammer.com/understanding-the-asterisk-of-python/)
+- [파이썬 Asterisk(*)에 대해서](https://dailyheumsi.tistory.com/41)
+- [PYTHON에서의 ASTERISK는 무슨일을 하는가.](https://jangjy.tistory.com/358)
+- [파이썬의 Asterisk(*) 이해하기](https://mingrammer.com/understanding-the-asterisk-of-python/)
