@@ -1,6 +1,6 @@
 ## 서론
 
-Python을 사용하다 보면 *(별표, Asterisk)을 많이 사용하는 것을 봤을 것이다.
+Python을 사용하다 보면 *(별표, Asterisk)을 많이 사용하는 것을 봤을 것이다.<br/>
 곱셈 및 거듭제곱에도 사용하고, 리스트 타입의 데이터를 반복적으로 확장할 때도 사용한다.
 
 ```python
@@ -23,7 +23,7 @@ Python을 사용하다 보면 *(별표, Asterisk)을 많이 사용하는 것을 
 
 ## Unpacking 역할
 
-`*`는 unpacking 역할을 한다는 것을 알고 있었는가? 
+`*`는 unpacking 역할을 한다는 것을 알고 있었는가? <br/>
 쉽게 말해서 괄호 안에 있던 데이터들을 풀어 각각으로 만들어 준다.
 
 ```python
@@ -101,7 +101,7 @@ dictionary 타입 또한 풀어보니 key 값들로 풀어지는 것을 확인�
 
 ### positional arguements
 
-positional arguements 만 받을 때는 아래와 같이 사용한다.
+positional arguements 만 받을 때는 아래와 같이 사용한다.<br/>
 함수 인자 값으로는 `*`을 붙인 인자명을 넣어준다면, 함수를 호출할 때는 필요한 인자를 넣어줄 수 있다.
 
 ```python
@@ -116,7 +116,7 @@ print_info("insutance", 99, "Male")
 
 ### keyword arguements
 
-keyword arguements 만 받을 때는 아래와 같이 사용한다.
+keyword arguements 만 받을 때는 아래와 같이 사용한다.<br/>
 함수 인자 값으로는 `**`을 붙인 인자명을 넣어주고, **함수를 호출할 때 key 통해 값을 주어야** 한다.
 
 ```python
@@ -138,8 +138,9 @@ print_info(name="insutance", age=99, gender="Male")
 
 ### positional arguments & keyword arguments
 
-positional arguments 와 keyword arguments를 모두 받을 때는 아래와 같이 사용한다.
-`*args` 는 임의의 개수의 positional arguments를 받고, `**kwargs` 는 임의의 개수의 keyword arguments를 받는다. 이때 `*args`, `**kwargs` 형태로 가변 인자 받는 것을 packing이라고 한다.
+positional arguments 와 keyword arguments를 모두 받을 때는 아래와 같이 사용한다.<br/>
+`*args` 는 임의의 개수의 positional arguments를 받고, `**kwargs` 는 임의의 개수의 keyword arguments를 받는다.<br/>
+이때 `*args`, `**kwargs` 형태로 가변 인자 받는 것을 packing이라고 한다.
 
 ```python
 def print_info(*args, **kwargs):
@@ -151,7 +152,8 @@ print_info("insutance", 99, gender="Male")
 >>> {'gender': 'Male'}   # kwargs
 ```
 
-이때 **positional arguments 가 keyword arguments 보다 무조건 앞에 위치**해야 한다. 그렇지 않으면 오류를 발생시킨다. 그 이유는 positional arguments의 경우 **생략이 불가능**하며 개수대로 정해진 위치에 인자를 전달해야 하지만, keyword arguments는 디폴트 값을 설정할 수 있어 **생략이 가능**하기 때문이다.
+이때 **positional arguments 가 keyword arguments 보다 무조건 앞에 위치**해야 한다.<br/>
+그렇지 않으면 오류를 발생시킨다. 그 이유는 positional arguments의 경우 **생략이 불가능**하며 개수대로 정해진 위치에 인자를 전달해야 하지만, keyword arguments는 디폴트 값을 설정할 수 있어 **생략이 가능**하기 때문이다.
 
 ```python
 def print_info(**kwargs, *args):
