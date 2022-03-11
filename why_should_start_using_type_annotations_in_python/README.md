@@ -104,7 +104,8 @@ def sgd(
 ```python
 my_var: <type> = <value>
 ```
-- 변수에 Annotation 적용 : `str` `int` `list` `bool` `tuple` `dict`
+- 변수에 Annotation 적용 
+  -  `str` `int` `list` `bool` `tuple` `dict`
 ```python
 name: str = "Kim'  # str
 
@@ -117,9 +118,9 @@ is_male: bool = True  # bool
 height_weight: tuple = (199, 99)  # tuple
 
 abc: dict = {
-	'a': 'A',
-    'b': 'B', 
-    'c': 'C'
+  'a': 'A',
+  'b': 'B', 
+  'c': 'C'
 }  # dict
 
 ```
@@ -128,8 +129,8 @@ abc: dict = {
 파이썬 함수에는 인자 타입과 반환타입에 대해 타입 힌트를 제공할 수 있습니다. 
 ```python
 def my_func(param: <type>) -> <output-type>:
-	~~
-    return 
+  # 내용
+    return # 반환
 ```
 - 함수에 Annotation 적용
 
@@ -150,7 +151,7 @@ def mystery_combine(a: str, b: str, times: int) -> str:
 ### Typing 라이브러리
 좀 더 복잡한 Type Annotation을 사용하기 위해서는 파이썬 표준 라이브러리인 `typing` 을 사용할 수 있습니다.
 
-- **`List`, `Dict`, `Tuple`, `Set`**
+- **`List`, `Dict`, `Tuple`, `Set`**  
   : python 내장 자료 구조에 대한 타입을 명시할 수 있습니다.
 ```python
 from typing import List, Dict, Tuple, Set
@@ -166,7 +167,7 @@ score: Tuple[int, float, int] = (60, 62.5, 30)
 names_startswith: Set[str] = {'K', 'L', 'P'}
 ```
 
-- **Type Aliases**
+- **Type Aliases**  
   : 어떠한 타입에 별칭을 만들어서 사용할 수 있습니다.
    - 아래 예시에서는 `Dict[str, int]` 형태의 'height_type'을 만들어 `print_heights()`의 인자 타입으로 사용하였습니다. 
 ```python
@@ -179,7 +180,7 @@ def print_heights(heights: height_type) -> None:
         print(f'이름: {name} / 키: {height}')
 ```
 
-- **Multiple Return Values**
+- **Multiple Return Values**  
   : 함수에서 여러 타입 값들을 튜플로 반환하고 싶은 경우, 다음과 같이 사용할 수 있습니다.
 ```python
 from typing import List, Tuple
@@ -191,7 +192,7 @@ def mean_heights(heights: List[int]) -> Tuple[str, int]:
 ```
   
 
-- **Union**
+- **Union**  
   : 힌트 내에 여러 개의 타입을 허용합니다.
 ```python
 from typing import Union
@@ -200,7 +201,7 @@ def print_plus(n1: Union[int, float], n2: Union[int, float]]) -> None:
 	print(n1 + n2)
 ```
 
-- **Final**
+- **Final**  
   : 상수에 대한 Type Annotations입니다
 
 ```python
@@ -209,7 +210,7 @@ from typing import Final
 PI: Final[float] = 3.1415
 ```
 
-- **Optional**
+- **Optional**  
   : 함수에서 None이 허용되는 매개변수에 대한 타입을 명시합니다.
 ```python
 from typing import Optional
@@ -221,7 +222,7 @@ def say_hi(additional_msg: Optional[str] = None) -> None:
         print('hi')
 ```
 
-- **Callable**
+- **Callable**  
   : 파이썬에서는 함수를 변수 안에 저장하거나 다른 함수의 인자로 넘기는 등의 일을 할 수 있습니다. `Callable`은 이러한 함수에 대한 Type을 명시합니다.
   - `Callable[[인자 타입(input)], 반환 타입(output)]`
   - 아래 예시에서는 단어를 concat시키는 `concat_words()`를 통해 1개의 str타입 인자를 받아 `print_words()`를 실행시킵니다.
