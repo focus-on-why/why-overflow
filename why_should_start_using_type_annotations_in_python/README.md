@@ -118,9 +118,9 @@ is_male: bool = True  # bool
 height_weight: tuple = (199, 99)  # tuple
 
 abc: dict = {
-  'a': 'A',
-  'b': 'B', 
-  'c': 'C'
+    'a': 'A',
+    'b': 'B', 
+    'c': 'C'
 }  # dict
 
 ```
@@ -136,13 +136,13 @@ def my_func(param: <type>) -> <output-type>:
 
 ```python
 def plus(n1: int, n2: int) -> int:
-	return n1 + n2
+    return n1 + n2
     
 def plus_minus(n1: int, n2: int) -> list:
-	return [n1 + n2, n1 - n2]
+    return [n1 + n2, n1 - n2]
 
 def print_message(msg: str) -> None:
-	print(msg)
+    print(msg)
     
 def mystery_combine(a: str, b: str, times: int) -> str:
     return (a + b) * times
@@ -198,7 +198,7 @@ def mean_heights(heights: List[int]) -> Tuple[str, int]:
 from typing import Union
 
 def print_plus(n1: Union[int, float], n2: Union[int, float]]) -> None:
-	print(n1 + n2)
+    print(n1 + n2)
 ```
 
 - **Final**  
